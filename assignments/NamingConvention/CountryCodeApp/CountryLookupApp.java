@@ -21,7 +21,7 @@ public class CountryLookupApp {
                 System.out.println("Bye");
                 break;
             }
-            printCountryName(inputCode);
+            processInputCode(inputCode);
         }
 
     }
@@ -31,12 +31,14 @@ public class CountryLookupApp {
         return this.scanner.nextLine().toUpperCase();
     }
 
-    private void printCountryName(String code){
+    private void processInputCode(String code){
 
-        String countryName = registry.getCountryName(code);
+        CountryInfo countryInfo = registry.getCountry(code);
 
-        if(countryName != null){
-            System.out.println(countryName);
+        if(countryInfo != null){
+            
+            System.out.println( countryInfo.name() + "'s Neighbour: " +  countryInfo.neighbors());
+
         }else{
             System.out.println("Not a valid country code.");
         }
