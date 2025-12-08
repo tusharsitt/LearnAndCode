@@ -36,8 +36,8 @@ def main():
 Guess Number Game : Refactored
 '''
 import random
-def is_valid_input(s):
-    if s.isdigit() and 1<= int(s) <=100:
+def is_valid_input(input):
+    if input.isdigit() and 1<= int(input) <=100:
         return True
     else:
         return False

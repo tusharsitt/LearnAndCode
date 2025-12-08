@@ -14,14 +14,14 @@ public class CountryLookupApp {
     public void start(){
 
         System.out.println("Welcome to Country Lookup App");
-
-        while(true){
+        
+        boolean running  = true;
+        while(running){
             String inputCode = promptUserForCode();
             if(inputCode.equals(QUIT_COMMAND)){
                 System.out.println("Bye");
-                break;
-            }
-            processInputCode(inputCode);
+                running = false;
+            }else processInputCode(inputCode);
         }
 
     }
