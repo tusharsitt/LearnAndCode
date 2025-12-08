@@ -43,8 +43,8 @@ def main():
         user_input = input("Ready to roll? Enter Q to Quit: ")
         
         if user_input.lower() != "q":
-            dice_face_up = generate_random_integer(lowest_count_on_dice, highest_count_on_dice)
-            print("You have rolled a", dice_face_up)
+            dice_roll_result = generate_random_integer(lowest_count_on_dice, highest_count_on_dice)
+            print("You have rolled a", dice_roll_result)
         else:
             is_running = False
 
