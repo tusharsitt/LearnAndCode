@@ -36,7 +36,6 @@ public class PaymentProcessor {
                 logger.log("Attempt " + attempt + " failed: " + e.getMessage());
             }
         }
-
         return new PaymentResult(PAYMENT_FAILED);
     }
 
@@ -60,7 +59,6 @@ public class PaymentProcessor {
                 request.amount(),
                 LocalDateTime.now()
         );
-
         history.put(transactionId, record);
     }
 
