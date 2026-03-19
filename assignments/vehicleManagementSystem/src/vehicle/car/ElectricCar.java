@@ -6,7 +6,7 @@ import vehicle.VehicleInfo;
 public class ElectricCar extends AbstractVehicle {
 
     public ElectricCar(VehicleInfo vehicleInfo) {
-        super(vehicleInfo, 100.0); // 100 kWh battery capacity
+        super(vehicleInfo);
     }
 
     @Override

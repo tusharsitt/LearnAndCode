@@ -8,7 +8,7 @@ public class Motorcycle extends AbstractVehicle {
     private final boolean hasSidecar;
 
     public Motorcycle(VehicleInfo vehicleInfo, boolean hasSidecar) {
-        super(vehicleInfo, 15.0); // 15 liters fuel capacity
+        super(vehicleInfo);
         this.hasSidecar = hasSidecar;
     }
 

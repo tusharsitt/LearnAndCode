@@ -5,22 +5,26 @@ public class VehicleInfo {
     private final String make;
     private final String model;
     private final  int yearOfManufacture;
+    private final double maxEnergyCapacity;
     private double price;
 
-    public VehicleInfo(String make, String model, int yearOfManufacture) {
-        this( make, model, yearOfManufacture, 0.0);
+
+    public VehicleInfo(String make, String model, int yearOfManufacture, double maxEnergyCapacity) {
+        this( make, model, yearOfManufacture,   maxEnergyCapacity, 0.0);
     }
 
-    public VehicleInfo(String make, String model, int yearOfManufacture, double price) {
+    public VehicleInfo(String make, String model, int yearOfManufacture, double maxEnergyCapacity, double price) {
         this.make = make;
         this.model = model;
         this.yearOfManufacture = yearOfManufacture;
+        this.maxEnergyCapacity = maxEnergyCapacity;
         this.price = price;
     }
 
     public String getMake() {
         return make;
     }
+    
     public String getModel() {
         return model;
     }
@@ -31,6 +35,10 @@ public class VehicleInfo {
 
     public double getPrice() {
         return price;
+    }
+
+    public double getMaxEnergyCapacity() {
+        return maxEnergyCapacity;
     }
 
     public void updatePrice(double newPrice) throws IllegalArgumentException{

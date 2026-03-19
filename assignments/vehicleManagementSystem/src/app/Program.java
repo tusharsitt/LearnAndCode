@@ -10,9 +10,9 @@ public class Program {
     public static void main(String[] args) {
         System.out.println("=== Refactored Vehicle Management Demo ===\n");
 
-        VehicleInfo hondaInfo = new VehicleInfo("Honda", "Accord", 2023, 28000);
-        VehicleInfo harleyInfo = new VehicleInfo("Harley-Davidson", "Street 750", 2022, 7500);
-        VehicleInfo teslaInfo = new VehicleInfo("Tesla", "Model 3", 2023, 42000);
+        VehicleInfo hondaInfo = new VehicleInfo("Honda", "Accord", 2023, 60.0, 28000);
+        VehicleInfo harleyInfo = new VehicleInfo("Harley-Davidson", "Street 750", 2022, 15.0, 7500);
+        VehicleInfo teslaInfo = new VehicleInfo("Tesla", "Model 3", 2023, 100.0, 42000);
 
 
         Car car = new Car(hondaInfo);

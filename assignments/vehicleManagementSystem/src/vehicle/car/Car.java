@@ -6,7 +6,7 @@ import vehicle.VehicleInfo;
 public class Car extends AbstractVehicle {
 
     public Car(VehicleInfo vehicleInfo) {
-        super(vehicleInfo, 60.0); // 60 liters fuel capacity
+        super(vehicleInfo);
     }
 
     @Override
