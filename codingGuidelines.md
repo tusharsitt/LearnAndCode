@@ -39,9 +39,21 @@
 *   **Avoid Boolean Parameters:** Boolean parameters make methods harder to understand.
 *   **Limit Method Parameters:** Avoid methods with many parameters. If more than 3–4 parameters, consider using an object.
 *   **Keep Methods Small:** Methods should perform one logical task. Prefer 5–20 lines per method.
+*   **Class Members Ordering:** Class members should be ordered as follows:
+    1.  Constants
+    2.  Static fields
+    3.  Instance fields
+    4.  Constructors
+    5.  Public methods
+    6.  Protected methods
+    7.  Private methods
+
+* **Don't Repeat Yourself (DRY):** Avoid code duplication. Extract common code into reusable methods or classes.
+* **Consistent Naming Patterns:** Use consistent naming patterns throughout the codebase. Pick one word per concept and use it consistently (e.g., don't mix fetch, get, retrieve).
 
 ## 4. Exception Handling
 *   **Catch Specific Exceptions:** Always catch the most specific exception first rather than using a generic `catch (Exception e)`.
+* **Optional:** Use `Optional` to handle the absence of a value.
 *   **Never Swallow Exceptions:** Avoid leaving catch blocks empty. At a minimum, log the exception.
     *   *Example:*
         ```java
