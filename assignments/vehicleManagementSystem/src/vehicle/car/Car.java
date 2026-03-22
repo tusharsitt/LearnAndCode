@@ -12,7 +12,7 @@ public class Car extends AbstractVehicle {
     @Override
     public void printDetails() {
         System.out.println("Car: " + getVehicleInfo().getYearOfManufacture() + " " +
-                getVehicleInfo().getMake() + " " + getVehicleInfo().getModel() +
+                getVehicleInfo().getBrand() + " " + getVehicleInfo().getModel() +
                 ", Price: $" + getVehicleInfo().getPrice());
     }
 }

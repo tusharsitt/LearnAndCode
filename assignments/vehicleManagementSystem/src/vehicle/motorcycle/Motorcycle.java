@@ -15,7 +15,7 @@ public class Motorcycle extends AbstractVehicle {
     @Override
     public void printDetails() {
         System.out.println("Motorcycle: " + getVehicleInfo().getYearOfManufacture() + " " +
-                getVehicleInfo().getMake() + " " + getVehicleInfo().getModel() +
+                getVehicleInfo().getBrand() + " " + getVehicleInfo().getModel() +
                 ", Sidecar: " + hasSidecar +
                 ", Price: $" + getVehicleInfo().getPrice());
     }

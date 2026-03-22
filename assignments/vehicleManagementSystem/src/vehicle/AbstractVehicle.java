@@ -26,7 +26,7 @@ public abstract class AbstractVehicle implements Vehicle {
     public void start() {
         if (energyLevel > 0) {
             isRunning = true;
-            System.out.println(vehicleInfo.getMake() + " " + vehicleInfo.getModel() + " started.");
+            System.out.println(vehicleInfo.getBrand() + " " + vehicleInfo.getModel() + " started.");
         } else {
             System.out.println("Cannot start " + vehicleInfo.getModel() + " - out of energy!");
         }
@@ -36,7 +36,7 @@ public abstract class AbstractVehicle implements Vehicle {
     public void stop() {
         if (isRunning) {
             isRunning = false;
-            System.out.println(vehicleInfo.getMake() + " " + vehicleInfo.getModel() + " stopped.");
+            System.out.println(vehicleInfo.getBrand() + " " + vehicleInfo.getModel() + " stopped.");
         } else {
             System.out.println("The " + vehicleInfo.getModel() + " is already stopped.");
         }

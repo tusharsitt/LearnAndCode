@@ -12,7 +12,7 @@ public class ElectricCar extends AbstractVehicle {
     @Override
     public void printDetails() {
         System.out.println("Electric Car: " + getVehicleInfo().getYearOfManufacture() + " " +
-                getVehicleInfo().getMake() + " " + getVehicleInfo().getModel() +
+                getVehicleInfo().getBrand() + " " + getVehicleInfo().getModel() +
                 ", Price: $" + getVehicleInfo().getPrice());
     }
 
