@@ -18,4 +18,4 @@ public class Calculator {
         System.out.println("10 % 3 = " + calc.modulo(10, 3));
         System.out.println("2 ^ 3 = " + calc.power(2, 3));
     }
-}
+}// This feature will be lost
