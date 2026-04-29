@@ -8,6 +8,7 @@ public class Calculator {
         return a / b; 
     }
     public int modulo(int a, int b) { return a % b; }
+    public double power(double base, double exponent) { return Math.pow(base, exponent); }
     public static void main(String[] args) {
         Calculator calc = new Calculator();
         System.out.println("2 + 3 = " + calc.add(2, 3));
@@ -15,5 +16,6 @@ public class Calculator {
         System.out.println("4 * 3 = " + calc.multiply(4, 3));
         System.out.println("10 / 2 = " + calc.divide(10, 2));
         System.out.println("10 % 3 = " + calc.modulo(10, 3));
+        System.out.println("2 ^ 3 = " + calc.power(2, 3));
     }
 }
