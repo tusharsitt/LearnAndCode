@@ -24,7 +24,7 @@ public class Expense {
     @NotNull
     Double amount;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     Category category;
 

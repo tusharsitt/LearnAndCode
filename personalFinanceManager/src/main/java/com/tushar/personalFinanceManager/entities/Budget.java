@@ -24,8 +24,8 @@ public class Budget {
     @NotNull
     Double limit;
 
-    @OneToOne
-    @JoinColumn(name = "catergory_id", referencedColumnName = "id")
+    @ManyToOne
+    @JoinColumn(name = "category_id", referencedColumnName = "id")
     Category category;
 
     // TODO: can introduce a custom annotation for checking startDate >= endDate

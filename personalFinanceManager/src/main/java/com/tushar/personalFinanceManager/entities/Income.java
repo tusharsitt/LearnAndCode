@@ -18,7 +18,7 @@ public class Income {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    Long Id;
+    Long id;
 
     @Column(name = "date")
     @NotNull
@@ -29,7 +29,7 @@ public class Income {
     @Positive
     Double incomeAmount;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     Category category;
 
