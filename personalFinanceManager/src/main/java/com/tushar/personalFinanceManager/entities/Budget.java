@@ -1,5 +1,6 @@
 package com.tushar.personalFinanceManager.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
@@ -36,4 +37,10 @@ public class Budget {
     LocalDate endDate;
 
     // TODO: Check if introducing a status filed adds any value
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    @JsonBackReference
+    User user;
+
 }

@@ -1,5 +1,6 @@
 package com.tushar.personalFinanceManager.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
@@ -31,4 +32,9 @@ public class Expense {
     // TODO : Maybe we can update to the auditing thing later, by creating a base entity with audit fields of @CreatedDate & @LastModifiedDate
     @Column(name = "date")
     LocalDate date;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    @JsonBackReference
+    User user;
 }

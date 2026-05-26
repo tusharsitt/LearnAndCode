@@ -1,5 +1,6 @@
 package com.tushar.personalFinanceManager.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
@@ -27,6 +28,15 @@ public class Income {
     @NotNull
     @Positive
     Double incomeAmount;
+
+    @OneToOne
+    @JoinColumn(name = "category_id", referencedColumnName = "id")
+    Category category;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    @JsonBackReference
+    User user;
 
     // TODO: We can also introduce income sources.
 
